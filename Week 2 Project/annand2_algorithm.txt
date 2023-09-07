@@ -1,0 +1,22 @@
+# Write a program that checks if two positive integers are divisble
+
+function main()
+	infinite while loop:
+		ask for first number
+		ask for second number
+		
+		declare result variable
+		
+		if one or more numbers is neagtive:
+			ask for numbers again
+		else:
+			if numbers are not divisible:
+				result variable is False
+				print result variable
+			else:
+				result variable is True
+				return result variable
+				break out of loop
+				
+
+call the main()	function

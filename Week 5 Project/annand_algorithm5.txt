@@ -1,0 +1,37 @@
+import pydoc
+
+class Student
+	define student name
+	define student age
+	
+	create constructor function that takes no arguments
+	
+	create display method
+		print name and age
+		
+class Engineer(Student)
+	define list of courses
+	
+	create constructor function that takes no arguments
+		call Student constructor
+	
+	create displayEngineer method
+		print name, age and list of courses
+		
+class Doctor(Student)
+	define list of hospitals
+	
+	create constructor function that takes no arguments
+		call Student constructor
+		
+	create displayDoctor method
+		print name, age, and list fo hospitals
+		
+define student1 as instance of Student
+call display method on student1
+
+define student2 as instance of Engineer
+call displayEngineer method on student2
+
+define student3 as instance of Doctor
+call displayDoctor method on student3

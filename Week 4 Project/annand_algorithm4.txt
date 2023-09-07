@@ -1,0 +1,42 @@
+# Create a class function Rectangle that builds rectangle with length and width attributes
+# Create a child class that inherits from Rectangle and adds height attribute and volum
+
+Define Rectangle class
+
+	function __init__
+		declare length variable
+		declare width variable
+		
+	function perimeter
+		calculate perimeter as sum of the doubles of length and width
+		
+	function area
+		calculate area as product of length and width
+	
+	function display
+		print length, width, results of area function, and results of perimeter function
+		
+Define Parallelepiped class
+
+	function __init__
+		call Rectangle.__init__
+		declare height variable
+		
+	function volume
+		return product of length, width, and height
+	
+	function displayVolume
+		print results of volume function
+		
+Ask user for length value
+Ask user for width value
+
+Declare user_shape variable as new instance of Rectangle class
+
+Call display method on user_shape variable
+
+Ask user for height value
+
+Declare user_parallelepiped variable as instance of Parallelepiped class
+
+Call displayVolume method on user_parallelepiped variable

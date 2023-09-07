@@ -1,0 +1,60 @@
+
+import pydoc module
+
+class Deque:
+	constructor function for Deque class
+		intialize object.items as empty list
+	isEmpty method:
+		returns Boolean for if list is empty
+	addToStart method(item)
+		inserts item at the start of the list
+		returns updated list
+	addToEnd method(item)
+		appends item at the end of the list
+		returns updated list
+	removeFromStart method:
+		pops first element of list out of the list
+		returns the item removed
+	removeFromEnd method:
+		pops last element of list out of the list
+		returns removed element
+	End method:
+		returns item at end of the list
+	Start method:
+		returns item at the start of the list
+	size method():
+		returns the length of the list
+		
+intialize deque variable as an instance of Deque
+
+def main():
+
+	create infinite while loop:
+		ask for input
+		if input asks to quit
+			break loop
+		if input asks for list:
+			print list of items currently in deque
+		if input asks for size:
+			print the length of the list in deque
+		if input asks for end:
+			print the item at the end of the list in deque
+		if input asks for start:
+			print the item at the start of the list in deque
+		else:
+			ask if the user would like to add or remove item
+			ask if user would to like to add/remove to/from start or end
+			
+			if add:
+				if start:
+					call addToStart method on deque with inputted value as parameter
+				else:
+					call addToEnd method on deque with inputted value as parameter
+			else:
+				if start:
+					call removeFromStart method on deque
+				else:
+					call removeFromEnd method deque
+					
+call main function
+	

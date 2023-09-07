@@ -1,0 +1,61 @@
+Create a battleship game with a 2D array
+
+delcare global grid as a list
+declare global variable for grid size
+declare global variable for number of ships in the game
+
+function drawBoard(array)
+	print the labels for columns
+	loop through the array
+		print the label for the row
+		loop through a list in the array
+			print the elements of the list into the current row
+		print a new line to prepare to start the next row
+		
+function setupBoard()
+	create variables for number of rows and columns needed
+	use nested for loops to create 2D array of dots
+	use for loop to get 5 ships in the 2D array
+		create infinite while loop
+			set row number to random integer
+			set column number to random integer
+			if grid[row number][column number] is not already a ship
+				make that element in the 2D array a ship
+				break from the while loop to create the next ship
+				
+function isGameOver()
+	create variable that counts sunken ships
+	create nested for loops
+		check if each element is a sunken ship
+			add 1 to the sunken ship variable if the element is a sunken ship
+			
+	check if the sunken ship variable is equal to number of ships
+
+function checkHitOrMiss(row, col, arr)
+	if the element equal to arr[row][col] is a ship
+		chnage element to sunk ship "X"
+		print "HIT"
+	else
+		change element to a miss "O"
+		print "MISS"
+		
+function main()
+	call the setupBoard function
+	call the drawBoard fucntion with grid variable as argument
+	
+	create loop that continues while isGameOver() function is false
+		ask user for row
+		ask user for column
+		call checkHitOrMiss function for row column and grid
+		call drawBoard function to show user the board again
+		
+		if there is an IndexError
+			ask user to enter integers from 0 to 9
+		if there is a NameError
+			ask user to enter only integers
+			
+	print "GAME OVER!" once loop exits
+	
+	
+call the main function
+	

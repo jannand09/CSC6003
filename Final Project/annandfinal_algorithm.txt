@@ -1,0 +1,226 @@
+import random module
+
+class Account
+	constructor function(self, num, fname, lname, ssn, pin, balance)
+		intialize account Number
+		intialize first name
+		intialize last name
+		intialize social security number
+		initialize pin number
+		initialize account balance
+	account number getter():
+		return account number
+	account number setter():
+		set new account number
+	account owner first name getter():
+		return owner first name
+	account owner first name setter():
+		set new owner first name
+	account owner last name getter():
+		return owner last name
+	account owner last name setter():
+		set new owner last name
+	account SSN getter():
+		return account ssn
+	account SSN setter():
+		set new account ssn
+	account PIN getter():
+		return account PIN
+	account PIN setter():
+		set new account PIN
+	account balance getter():
+		return balance
+	account balance setter():
+		set new account balance
+	deposit method(deposit):
+		balance = balance + deposit
+		return balance
+	withdraw method(withdrawl):
+		balance = balance - withdrawl
+		return balance
+	validPIN method(input PIN):
+		return boolean of PIN == input PIN
+	information method():
+		print all account attributes of the constructor
+
+class Bank
+	constructor function
+		intialize empty list of accounts
+		intialize maximum number of accounts bank can hold
+	add Account to bank method(new account):
+		if there is no available space in list of accounts:
+			tell user no more accounts available
+			return False
+		if there is availability:
+			append new account to end of the list of accounts
+			return True
+	remove account from bank method(account):
+		intialize i as 0
+		loop through each account in list
+			if account in list matches account
+				remove account
+				tell user account has been removed
+				increase i by one
+				return true
+		if i == 0:
+			return False
+	find account method(account number):
+		initialize i as 0
+		loop through each account in list:
+			if account number of account matches account number parameter:
+				increase i by 1
+				return account that corresponds to account number parameter
+		if i == 0:
+			return None
+
+class CoinCollector:
+	parseChange method(user coins):
+	intialize value as 0
+	loop through the user coins:
+		add value of each coin in cents to the value variable
+	return value in cents
+
+class BankUtility:
+	prompt user for string method(prompt):
+		prompt user to enter a string
+		return user input
+	prompt user for positive number method(prompt):
+		prompt user to enter a positive number
+		return user input
+	generate random number method(min, max):
+		intialize random integer between min and max values
+		return random integer variable
+	convert dollars to cents(amount)
+		return amount times 100
+	isNumeric method(value):
+		check if value is a number with isDigit method
+
+class BankManager:
+	constructor method to act as main function of the program
+		intialize my_bank as instance of Bank class
+		create infinite loop
+			print all the options available to user
+			ask user which option they would like to select
+			
+			if user chooses option one:
+				print OPEN Account
+				ask user for first name
+				ask user for last name
+				ask user for SSN
+				create random account number
+				create random PIN number
+				ask user for initial deposit
+				
+				if len of SSN equals 9:
+					create new account object with new account information as parameters
+					add account to bank
+					print account information
+				else:
+					print Invalid SSN
+			if user chooses option 2:
+				print SEARCH ACC INFORMATION
+				call prompt for account and pin method
+			if user chooses option 3:
+				call prompt for account and pin method
+				if method does not return None:
+					ask for new PIN
+					ask for new Pin again
+					if both new PINs match:
+						use setter to set new pin for account
+						tell user pin has been updated
+					else:
+						tell user pins do not match and to try again
+			if user choses option 4:
+				call prompt for account and pin method
+				if method does not return None:
+					ask for deposit amount
+					if deposit is more than 0:
+						call depsoit method to deposit money into account
+						print new balance
+					else:
+						tell user they cannot deposit negative amounts of money
+			if user chooses option 5:
+				call prompt for account and pin method for first account
+				if method does not return None:
+					ask for account to transfer to
+					ask for transfer amount
+					if transfer amt is greater than first account balance:
+						tell user there are insufficient funds
+					elif transfer amount is negative:
+						tell user amount must be positive
+					else:
+						withdraw money from first account
+						deposit money from second account
+						print new balances
+			if user chooses option 6:
+				call prompt for account and pin method
+				if method does not return None:
+					ask for withdrawl amount
+					if withdrawl amount is more than account balance:
+						tell user insufficient funds
+					else:
+						withdraw from account
+						print new balance
+			if user chooses option 7:
+				call prompt for account and pin method
+				if method does not return None:
+					ask for withdrawl amount
+					if withdrawl amount is more than account balance:
+						tell user insufficient funds						
+					else:
+						if withdrawl is more than 1000 or indivisible by 5:
+							tell user invalid withdrawl amount
+						else:
+							calculate max number of each bill available for withdrawl amount
+							if withdrawl amount is more than 0:
+								ask for number of each bill desired
+								calculate dollar amount of requested bills
+								if number of bills requested is more than available for desired withdrawl:
+									tell user invalid bill amount
+								else:
+									if withdrawl equals calculated amount from requested bills:
+										withdraw from account
+										print new balance
+									else:
+										tell user desired withdrawl and calculated amount do not match and to try again
+							else:
+								tell user withdrawl amount must be positive
+			if user chooses option 8:
+				call prompt for account and pin method
+				if method does not return None:
+					ask for string of coins
+					calculate value of coins using parseChange method
+					deposit value of coins in dollars
+					print amount from coins deposited
+					print new account balance
+			if user chooses option 9:
+				call prompt for account and pin method
+				if method does not return None:
+					remove account from bank
+					tell user account was removed
+			if user chooses option 10:
+				exit program
+			else:
+				tell user to choose different option
+				
+	promptForAccountNumberAndPIN(bank) mehtod:
+		ask for account number
+		ask for pin number
+		
+		if account associated with number is not in the bank:
+			print account not found
+			return None
+		else:
+			if Pin is valid:
+				print account information
+				return account
+			else:
+				print invalid pin
+				return None
+				
+call BankManager class
+						
+
+
+			
+	

@@ -1,0 +1,23 @@
+Calculate area, circumference, and volume with given radius
+
+radius = eval(INPUT)
+
+function calculate_circumference(argument)
+
+	Calculate circumference with equation 2*pi*radius
+	Return circumference
+	
+function calculate_area(argument)
+
+	Calculate area with equation pi*r**2
+	Return area
+	
+function calculate_volume(argument)
+
+	Calculate volume with equation (4/3)*pi*r**3
+	Return volume
+	
+print "The [quantity] of [circle/sphere] with radius of [radius value] is [returned value from appropriate function]"
+
+Pass radius value through each function and print the result in the phrase above for each quantity
+

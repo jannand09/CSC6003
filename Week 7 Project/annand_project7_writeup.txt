@@ -1,0 +1,12 @@
+
+10 Elements: BUBBLE  0.07583951950073242      MERGE 0.04251265525817871
+
+100 Elements: BUBBLE 5.100798845291138     MERGE 0.02330803871154785
+
+1000 Elements: BUBBLE 871.2879400253296   MERGE 0.4013485908508301
+
+100,000 Elements: BUBBLE >2 hours    MERGE 37.884414196014404
+
+According to the results above, the Merge sort algorithm is better than the Bubble sort algorithm. The time stamps show that the Merge sort is faster for each random list. 
+The difference in time taken to sort the list with each algorithm increases as the number of list elements grows. The time taken to sort a list of 10 elementsis miniscule; 
+however, the disparity in time taken to sort 100,000 elements is immense. The Merge sort took less than 38 seconds while the Bubble sort had not successfully sorted the list after 2 hours.
